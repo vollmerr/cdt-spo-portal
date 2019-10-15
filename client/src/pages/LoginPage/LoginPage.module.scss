@@ -1,0 +1,36 @@
+@import '../../style/variables';
+
+.root {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: $padding;
+};
+
+.container {
+    width: 100%;
+
+    @media screen and (min-width: $ms-screen-min-md) {
+        width: $ms-screen-min-md - 2 * $padding;
+    }
+
+    @media screen and (min-width: $ms-screen-min-lg) {
+        width: $ms-screen-min-lg - 2 * $padding;
+    }
+}
+
+.content {
+    background: $ms-color-white;
+    padding: $padding;
+    height: fit-content;
+    box-shadow: $box-shadow;
+}
+
+.linkSection {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    padding: $padding;
+}

@@ -1,0 +1,23 @@
+@import '../../style/variables';
+
+.root {
+    display: 'flex';
+    justify-content: 'center';
+    flex: 1;
+    padding: $padding;
+}
+
+.content {
+    background: $ms-color-white;
+    width: 100%;
+    padding: $padding;
+    box-shadow: '0 1.6px 3.6px 0 rgba(0,0,0,0.132), 0 0.3px 0.9px 0 rgba(0,0,0,0.108)';
+
+    @media screen and (min-width: $ms-screen-min-md) {
+        width: $ms-screen-min-md - 2 * $padding;
+    }
+
+    @media screen and (min-width: $ms-screen-min-lg) {
+        width: $ms-screen-min-lg - 2 * $padding;
+    }
+}

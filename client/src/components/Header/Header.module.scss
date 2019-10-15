@@ -1,0 +1,59 @@
+@import '../../style/variables';
+
+.root {
+    background: $ms-color-themePrimary;
+    height: $headerHeight;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $padding;
+
+    @media screen and (min-width: $ms-screen-min-md) {
+        padding: 0 2 * $padding;
+    }
+
+    @media screen and (min-width: $ms-screen-min-lg) {
+        padding: 0 4 * $padding;
+    }
+}
+
+.navigationLinks {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.utilityLinks {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.link {
+    font-size: $ms-font-size-m;
+    flex: 1;
+    position: relative;
+    color: $ms-color-white;
+    text-decoration: none;
+    padding: $padding / 2 $padding;
+    border-bottom: 2px solid transparent;
+
+    &:before {
+        background: transparent;
+        bottom: 0;
+        content: "";
+        height: 2;
+        left: 8;
+        position: absolute;
+        right: 8;
+    }
+
+    &:hover:before {
+        background: $ms-color-white;
+    }
+}
+
